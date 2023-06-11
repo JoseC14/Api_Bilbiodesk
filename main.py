@@ -1,9 +1,10 @@
 from flask import Flask,jsonify, request
 import uuid
-app = Flask(__name__)
-entidades = [
-]
+
 def create_app():
+    app = Flask(__name__)
+    entidades = [
+    ]
     @app.route('/entidades', methods = ['GET'])
     def obter_entidades():
         return jsonify(entidades)
